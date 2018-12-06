@@ -1,0 +1,7 @@
+{
+    "files.encoding": "gb2312",
+    "files.associations": {
+        "stdio.h": "c",
+        "string.h": "c"
+    }
+}

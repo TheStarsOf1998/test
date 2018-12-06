@@ -1,0 +1,13 @@
+declare
+cursor c_books(price number) is
+select booknum,bookname,author,bookprice
+from books
+where bookprice > price
+order by booknum;
+begin
+for v_books in c_books(40) loop
+DBMS_OUTPUT.PUT_LINE(c_books%ROWCOUNT ||':' || v_books.booknum || ' ' || 
+v_books.bookname || ' ' || v_books.author || ' ' || v_books.bookprice);
+end loop;
+end;
+/
